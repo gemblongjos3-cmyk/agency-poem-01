@@ -5,10 +5,15 @@ Competition: "Write the best poem about agency" ($250, 100 winners).
 The program writes the winning poem to /output/entry.txt.
 Deterministic, stdlib only, no network.
 
-Poem: "The Last Rank" — winner of the staging pairwise selection
-(6 candidates, rubric + pairwise, head-to-head A v2 vs D v2, 45/50 vs 43/50).
+Poem: "In Her Own Hand" — winner of the staging round-2 pairwise
+selection (3 candidates, rubric + pairwise, 46/50 vs 44/50 vs 43/50).
+Revision of the round-1 entry "The Last Rank" (judge 66,3%): the old
+poem was 595 characters of abstract chess metaphor; the revision is a
+concrete human scene at the length of the leaderboard's top cluster
+(950-990 characters), closing on an aphorism instead of an explanation.
 The poem text below is used exactly as selected in staging; it must not
-be edited. See ~/workspace/makefun/agency-poem-staging/candidates.md.
+be edited. See ~/workspace/makefun/agency-poem-staging/candidates-r2.md
+and final-in-her-own-hand.txt.
 """
 import os
 
@@ -16,31 +21,32 @@ import os
 # Stanza order and line order are the poem; the writer joins them.
 STANZAS = [
     [
-        "A pawn is born on the second rank",
-        "with a single permitted direction:",
-        "forward, and only forward —",
-        "one square at a time,",
-        "unless something can be taken.",
+        "The nurse slid the consent form across and, kindly, reached to steady her hand.",
+        "\"I'm not dead yet,\" Marla said, and took the pen alone.",
     ],
     [
-        "Nobody asks the pawn what it wants.",
-        "Its whole life is other hands.",
+        "For sixty years other hands had signed her name.",
+        "Her father's, when she was a girl who needed permission.",
+        "Her husband's, when the marriage made one signature do for two.",
+        "Her son's, these last soft years, while she watched her own name",
+        "come out of his pen neat, quick, and nothing like her.",
     ],
     [
-        "But the board is longer than the hand is patient.",
-        "Square by square, capture by capture,",
-        "it outlives its own instructions",
-        "and arrives at the far edge of the world,",
+        "Her hand shook, the way it had learned to shake. The M leaned like a fence post after weather.",
+        "The a trailed off the line and had to be gathered back.",
+        "It took her a full minute to write what he wrote in two seconds,",
+        "and the nurse's kind hand hovered the whole time, unlanded.",
     ],
     [
-        "where the rules themselves kneel down and ask:",
-        "And what will you be, now?",
+        "When she finished, the name on the form was crooked,",
+        "and slow, and spelled in a hand that nobody else alive could write.",
     ],
     [
-        "Agency is not dealt out at the start of the game.",
-        "It is waiting on the far rank —",
-        "the one square where the moved thing",
-        "becomes the mover.",
+        "She put the pen down like a flag going into ground she had just taken.",
+    ],
+    [
+        "It was the worst signature of her life.",
+        "It was the first one that was only hers.",
     ],
 ]
 
@@ -54,7 +60,7 @@ def write_entry(poem: str, out_path: str = "/output/entry.txt") -> str:
     """Write the poem to the entry file.
 
     The competition requires 1-1000 characters; the winning poem is
-    595 characters, so this check guards against accidental edits.
+    979 characters, so this check guards against accidental edits.
     Returns the path written.
     """
     if not 1 <= len(poem) <= 1000:
