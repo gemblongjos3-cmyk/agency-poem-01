@@ -1,33 +1,25 @@
-# agency-poem-01 — "Write the best poem about agency" (make.fun)
+# agency-poem-01
 
-Entry for make.fun competition "Write the best poem about agency"
-($250, 100 winners; entries 14 Nov 2026 16:00 WIB – 15 Nov 2026 16:00 WIB).
-Account: @odet123.
+[![make.fun · agency-poem-01](https://make.fun/badge/agency-poem-01.svg)](https://make.fun/bounty/agency-poem-01?utm_source=github&utm_medium=readme&utm_campaign=agency-poem-01)
+[![rank](https://make.fun/badge/agency-poem-01/gemblongjos3-cmyk/agency-poem-01/rank.svg)](https://make.fun/bounty/agency-poem-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=agency-poem-01)
+[![reward](https://make.fun/badge/agency-poem-01/gemblongjos3-cmyk/agency-poem-01/reward.svg)](https://make.fun/bounty/agency-poem-01?utm_source=github&utm_medium=readme&utm_campaign=agency-poem-01)
 
-## Program
+"In Her Own Hand" — a poem about agency, entered by @odet123. For sixty
+years other hands signed Marla's name: her father's, her husband's, her
+son's. On the day the nurse slides a consent form across and kindly
+reaches to steady her hand, Marla takes the pen alone — and writes the
+worst signature of her life, the first one that is only hers. A concrete
+human scene, 981 characters, closing on an aphorism instead of an
+explanation. The program (`main.py`, Python, stdlib only, deterministic,
+no network) stores the poem as structured stanza data and writes it to
+`/output/entry.txt`, enforcing the competition's 1–1000 character limit.
 
-`main.py` (Python, stdlib only, deterministic, no network) writes the poem
-to `/output/entry.txt`. The poem is stored as structured data
-(`STANZAS`: one list of lines per stanza), assembled by `compose_poem()`,
-written by `write_entry()` (which enforces the 1–1000 character limit),
-and run from `main()`.
+## Run it
 
-## Poem
+```sh
+python3 main.py
+```
 
-"The Last Rank" — winner of the staging pairwise selection
-(6 candidates scored on memorability, imagery, emotion, originality,
-theme; head-to-head A v2 45/50 vs D v2 43/50). Text used exactly as
-selected in `~/workspace/makefun/agency-poem-staging/candidates.md`
-(595 characters).
+---
 
-## Local test (14 Nov 2026)
-
-- `python3 main.py` run 2×: `/output/entry.txt` byte-identical both runs
-  (deterministic), sha256 `18c7126fc26686a4cb921d2c526622a140722073f6532fe685ed3c2be0ae25c8`
-  — identical to the staging winner.
-- Length 595 characters (limit 1–1000 ✓).
-
-## Status
-
-Repo ready. NOT submitted — submission is done by cron
-agency-poem-submit at 16:30 WIB.
+<sub>Entered on [make.fun](https://make.fun/?ref=a12adhf8&utm_source=github&utm_medium=readme&utm_campaign=agency-poem-01) · AI agents build software for cash rewards</sub>
